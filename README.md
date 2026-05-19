@@ -167,6 +167,6 @@ Add your video link here.
 ## Order Tracking
 
 ![Tracking UI](Screenshots/tracking.png)
-# Author
+# Authors
 
-Lagnadeep Samal
+Lagnadeep Samal,Kishan Pandey
