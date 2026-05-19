@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Commerce AI Agent
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            🛒 Commerce AI
+        </div>
+
+        <button
+            class="menu-btn"
+            onclick="openSection('orders')"
+        >
+            Orders
+        </button>
+
+        <button
+            class="menu-btn"
+            onclick="openSection('returns')"
+        >
+            Returns
+        </button>
+
+        <button
+            class="menu-btn"
+            onclick="showPaymentPage()"
+        >
+            Payments
+        </button>
+
+        <button
+            class="menu-btn"
+            onclick="openSection('delivery')"
+        >
+            Delivery
+        </button>
+
+        <button
+            class="menu-btn"
+            onclick="openSection('help')"
+        >
+            Help Center
+        </button>
+
+        <button
+            class="menu-btn"
+            onclick="openSection('analytics')"
+        >
+            Analytics
+        </button>
+
+        <!-- CHAT HISTORY -->
+
+        <div class="history-section">
+
+            <h3>
+                Recent Chats
+            </h3>
+
+            <div id="history-list"></div>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div class="chat-section">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="bot-info">
+
+                <div class="status-dot"></div>
+
+                <span>
+                    Commerce AI Assistant
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- DYNAMIC SECTION -->
+
+        <div
+            id="section-content"
+            class="section-content"
+        >
+
+            <h2>
+                Welcome 👋
+            </h2>
+
+            <p>
+                Ask anything about orders,
+                refunds, delivery or products.
+            </p>
+
+        </div>
+
+        <!-- CHAT -->
+
+        <div id="chat-box">
+
+            <div class="bot welcome">
+
+                👋 Hello! Welcome to Commerce AI.
+
+                <br><br>
+
+                Try asking:
+
+                <br>
+
+                • Return my shoes
+
+                <br>
+
+                • Track my order
+
+                <br>
+
+                • Latest delivery policy
+
+            </div>
+
+        </div>
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="quick-actions">
+
+            <button onclick="quickMessage('Track my order')">
+                📦 Track Order
+            </button>
+
+            <button onclick="quickMessage('Return my product')">
+                🔄 Return
+            </button>
+
+            <button onclick="quickMessage('Refund status')">
+                💳 Refund
+            </button>
+
+            <button onclick="quickMessage('Latest offers')">
+                🔥 Offers
+            </button>
+
+        </div>
+
+        <!-- INPUT -->
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="message"
+                placeholder="Ask anything..."
+            >
+
+            <button
+                class="send-btn"
+                onclick="sendMessage()"
+            >
+                ➤
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- PAYMENT MODAL -->
+
+<div
+    id="payment-modal"
+    class="payment-modal"
+>
+
+    <div class="payment-box">
+
+        <h2>
+            💳 Payment Gateway
+        </h2>
+
+        <input
+            type="text"
+            placeholder="Card Holder Name"
+            id="card-name"
+        >
+
+        <input
+            type="text"
+            placeholder="Card Number"
+            id="card-number"
+        >
+
+        <div class="payment-row">
+
+            <input
+                type="text"
+                placeholder="MM/YY"
+                id="expiry"
+            >
+
+            <input
+                type="password"
+                placeholder="CVV"
+                id="cvv"
+            >
+
+        </div>
+
+        <input
+            type="text"
+            placeholder="Amount"
+            id="amount"
+            value="4999"
+        >
+
+        <button
+            class="pay-btn"
+            onclick="processPayment()"
+        >
+            Pay Now
+        </button>
+
+        <button
+            class="close-btn"
+            onclick="closePayment()"
+        >
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Vector DB
+vectordb/
+
+# Data files
+data/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# Build files
+dist/
+build/
